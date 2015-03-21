@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__.'/vendor/autoload.php';
+
+use SigSample\Command;
+use Symfony\Component\Console\Application;
+
+$app = new Application('SigSample', '0.0.1');
+$app->addCommands([
+    new Command\SimpleCommand(),
+    new Command\ProgressCommand(),
+]);
+$app->run();
+
